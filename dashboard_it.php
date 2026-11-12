@@ -86,17 +86,25 @@ $query_laporan = mysqli_query($conn, "
                                 <input type="hidden" name="id_item_rusak" value="<?= $row['id_item']; ?>">
                                 
                                 <select name="id_item_pengganti" required>
-                                    <option value="">-- Pilih Unit Cadangan --</option>
-                                    <?php
-                                    // Ambil stok barang cadangan yang tersedia di gudang sesuai kategori yang mirip
-                                   $kategori = $row['kategori'];
-$query_gudang = mysqli_query($conn, "
-    SELECT * FROM inventaris 
-    WHERE kategori = '$kategori' 
-    AND status_item = 'Tersedia di Gudang' 
-    AND kondisi = 'Layak Pakai'
-");
-                                    ?>
+    <option value="">-- Pilih Unit Cadangan --</option>
+    <?php
+    $kategori = trim($row['kategori']);
+    $query_gudang = mysqli_query($conn, "
+        SELECT * FROM inventaris 
+        WHERE TRIM(kategori) = '$kategori' 
+        AND status_item = 'Tersedia di Gudang' 
+        AND kondisi = 'Layak Pakai'
+    ");
+    
+    // INI YANG KURANG: Looping untuk mencetak data gudang ke dalam pilihan dropdown
+    while ($gudang = mysqli_fetch_assoc($query_gudang)) {
+        echo "<option value='{$gudang['id_item']}'>{$gudang['nama_item']} ({$gudang['kode_aset']})</option>";
+    }
+    ?>
+</select>
+
+
+                                    
                                 </select>
                                 <button type="submit" name="proses_selesai">Kirim & Ganti</button>
                             </form>
