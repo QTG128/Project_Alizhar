@@ -3,7 +3,7 @@
 ## 📌 Project Description (Internship Project)
 This project is the development of an additional feature/module (add-on) designed to be integrated into Al Izhar Pondok Labu's in-house system. 
 
-The main goal of this module is to accelerate the follow-up process for replacing IT equipment. Teachers can easily report equipment damage (e.g., monitors, projectors) specifically based on their classroom (e.g., SD 204-C). The notification will instantly appear on the IT Team Dashboard along with recommendations for replacement items that are *ready* in the inventory.
+The main goal of this module is to accelerate the follow-up process for replacing IT equipment. Teachers can easily report equipment damage (e.g., monitors, projectors) specifically based on their classroom (e.g., SMP 204). The notification will instantly appear on the IT Team Dashboard along with recommendations for replacement items that are *ready* in the inventory.
 
 ## 🚀 Key Features
 - **Room-Based Reporting:** Displays a list of equipment available specifically in the room where the teacher is reporting from.
