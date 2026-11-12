@@ -1,12 +1,12 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = ""; // Kosongkan jika pakai XAMPP default
+$pass = "";
 $db   = "db_alizhar";
 
-$koneksi = mysqli_connect($host, $user, $pass, $db);
+$conn = mysqli_connect($host, $user, $pass, $db);
 
-if (!$koneksi) {
-    die("Koneksi gagal: " . mysqli_connect_error());
+if (!$conn) {
+    die("Koneksi database gagal: " . mysqli_connect_error());
 }
 ?>
