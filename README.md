@@ -47,6 +47,8 @@ If you don't have the project on your laptop yet, follow these steps:
 2. Open your browser and test the modules via these links:
    - Teacher Reporting Form: http://localhost/Project_Alizhar/guru_lapor.php
    - IT Team Dashboard: http://localhost/Project_Alizhar/dashboard_it.php
+   - Inventory Dashboard : http://localhost/Project_Alizhar/kelola_inventaris.php
+   - History Logs : http://localhost/Project_Alizhar/riwayat_laporan.php
 
 ---
 
